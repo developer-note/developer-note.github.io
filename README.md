@@ -15,7 +15,3 @@
 
 - [Platform Features](/hybris/features)
 - [Platform Architecture](/hybris/architecture)
-
-### Certification
-
-- [P_C4HCD_1905](/hybris/P_C4HCD_1905)
