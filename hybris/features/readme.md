@@ -259,7 +259,7 @@ PersistenceUtils.doWithSLDPersistence(() -> {
 });
 ``` 
 
-## [Workflow and Collaboration](/workflow)
+## [Workflow and Collaboration](../workflow)
 
 - a concept for modeling and processing of batch card-like processes.
 - processes which are separated into several tasks and are completed when these tasks are completed

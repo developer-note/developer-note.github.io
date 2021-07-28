@@ -6,7 +6,7 @@
 - all incoming requests go through a single servlet - `DispatcherServlet`
 (Front controller)
 
-![](/img/RequestLifecycle.png)
+![](/img/spring/RequestLifecycle.png)
 
 ## Dispatcher Servlet
 
@@ -43,7 +43,7 @@
 
 ### Context Hierarchy
 
-![Context Hierarchy](/img/mvc-context-hierarchy.png)
+![Context Hierarchy](/img/spring/mvc-context-hierarchy.png)
 
 - root should contain all infrastructure beans that should be shared between your other contexts and Servlet instances
 - These inherited beans can be overridden in the servlet-specific scope
@@ -162,7 +162,7 @@ org.springframework.web.servlet.FlashMapManager=org.springframework.web.servlet.
 
 ## Handler Mapping
 
-![MVC Request Flow](/img/RequestLifecycle-2.png)
+![MVC Request Flow](/img/spring/RequestLifecycle-2.png)
 
 - maps requested URLs to the handler methods/objects 
 
@@ -371,7 +371,7 @@ alternatively, using `mvc` namespace
 
 ## Handler Interceptor
 
-![Handler Interceptor](/img/RequestLifecycle-3.png)
+![Handler Interceptor](/img/spring/RequestLifecycle-3.png)
 
 - to perform actions before handling, after handling, or after completion (when the view is rendered), of a request.
 - used to apply some type of processing to the requests 
@@ -571,7 +571,7 @@ hello.url = /WEB-INF/jsp/hello.jsp
 
 ## Exception handling 
 
-![Exception Handling Flow](/img/exception-handling-flow-annotation.png)
+![Exception Handling Flow](/img/spring/exception-handling-flow-annotation.png)
 
 ### HandlerExceptionResolver
 

@@ -2,7 +2,7 @@
 
 # Core Extentions
 
-![Platform Core Extensions](platform_core_extensions.png)
+![Platform Core Extensions](/img/hybris/platform_core_extensions.png)
 
 - located in the `<HYBRIS_BIN_DIR>/platform/ext`
 - Extensions
@@ -144,7 +144,7 @@
 
 # Optional Extensions
 
-![Platform Optional Extensions](platform_optional_extensions.png)
+![Platform Optional Extensions](/img/hybris/platform_optional_extensions.png)
 
 - located in the `<HYBRIS_BIN_DIR>/modules/platform`
 - Extensions

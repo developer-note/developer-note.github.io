@@ -9,7 +9,7 @@
 
 ## Modules in Spring framework
 
-![Spring Modules](/img/spring-overview.png)
+![Spring Modules](/img/spring/spring-overview.png)
 
 ## Benefits of Using Spring
 
@@ -42,7 +42,7 @@
     - the `interfaces` that define how the client may use the services
     - the `injector`, which is responsible for constructing the services and injecting them into the client
 
-![Dependency Injection](/img/dependency-injection.jpg)
+![Dependency Injection](/img/spring/dependency-injection.jpg)
 
 ## Bean Injection
 
@@ -131,11 +131,11 @@
 
 ## Configuration Lifecycle
 
-![Configuration Lifecycle](/img/spring-configuration-lifecycle.png)
+![Configuration Lifecycle](/img/spring/spring-configuration-lifecycle.png)
 
 ## Bean Lifecycle
 
-![Bean Life Cycle](/img/bean-lifecycle-2.jpg)
+![Bean Life Cycle](/img/spring/bean-lifecycle-2.jpg)
 
 - Ioc Container instantiate beans from bean definition configuration file.
 - populates properties
@@ -154,11 +154,11 @@
     - `destroy()` defined in `DisposableBean`
     - custom `destroy-method` definiton
 
-![Bean Life Cycle](/img/bean-lifecycle-1.png)
+![Bean Life Cycle](/img/spring/bean-lifecycle-1.png)
 
 **All Types of Aware** 
 
-![Bean Life Cycle](/img/aware-interfaces.png)
+![Bean Life Cycle](/img/spring/aware-interfaces.png)
 
 **AppConfig.java**
 
