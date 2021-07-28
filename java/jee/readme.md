@@ -20,7 +20,7 @@
 
 ## `Servlet`
 
-![Servlet Invocation](/img/servlet-invocation.png)
+![Servlet Invocation](/img/java/servlet-invocation.png)
 
 - a web component that is deployed on the server to create Dynamic web page
 - receives and responds to requests from Web client
