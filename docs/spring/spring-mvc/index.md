@@ -2,8 +2,7 @@
 layout: default
 title: Spring MVC
 parent: Spring Framework
-nav_order: 2
-has_children: false
+nav_exclude: true
 ---
 
 # Spring MVC 

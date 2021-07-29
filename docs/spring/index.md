@@ -1,9 +1,7 @@
 ---
 layout: default
 title: Spring Framework
-parent: Developer's Note
-nav_order: 2
-has_children: true
+nav_order: 20
 ---
 
 # Spring Framework

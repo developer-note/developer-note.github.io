@@ -2,8 +2,7 @@
 layout: default
 title: Java/Jakarta Enterprise Edition
 parent: Java
-nav_order: 1
-has_children: false
+nav_exclude: true
 ---
 
 # Java/Jakarta Enterprise Edition
