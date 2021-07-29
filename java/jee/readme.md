@@ -22,6 +22,8 @@
 
 ![Servlet Invocation](/img/java/servlet-invocation.png)
 
+>  *In short, Servlet = Java + HTTP* 
+
 - a web component that is deployed on the server to create Dynamic web page
 - receives and responds to requests from Web client
 - lifecycle

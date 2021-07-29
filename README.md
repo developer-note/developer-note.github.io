@@ -8,6 +8,7 @@
 
 - [Spring Core Concepts](/spring/spring-core)
 - [Spring MVC Concepts](/spring/spring-mvc)
+- [Spring Security](/spring/security)
 
 ## Hybris
 
