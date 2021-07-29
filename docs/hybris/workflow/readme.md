@@ -1,3 +1,10 @@
+---
+layout: default
+title: Workflow
+nav_order: 4
+has_children: false
+---
+
 # Workflow
 
 - it is techinically a cronjob ( `WorkflowModel extends CronJobModel`) but not fully automated and required decisions on each action. `WorkflowTemplate` is the job definition ( `WorkflowTemplateModel extends JobModel` ).

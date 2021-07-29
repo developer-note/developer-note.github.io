@@ -1,3 +1,10 @@
+---
+layout: default
+title: Spring Security
+nav_order: 3
+has_children: false
+---
+
 # Spring Security
 
 ## Security Aspects

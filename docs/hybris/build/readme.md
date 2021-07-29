@@ -1,3 +1,10 @@
+---
+layout: default
+title: Building SAP Commerce
+nav_order: 2
+has_children: false
+---
+
 # Building SAP Commerce
 
 - does code generation, copying, parsing and compiling files

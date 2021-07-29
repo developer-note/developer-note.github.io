@@ -1,3 +1,10 @@
+---
+layout: default
+title: Spring Core Concepts
+nav_order: 1
+has_children: false
+---
+
 # Spring Core Concepts
 
 

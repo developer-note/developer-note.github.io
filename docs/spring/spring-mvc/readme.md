@@ -1,4 +1,11 @@
-# Spring MVC Concepts
+---
+layout: default
+title: Spring MVC
+nav_order: 2
+has_children: false
+---
+
+# Spring MVC 
 
 ## Spring Web MVC framework
 

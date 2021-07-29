@@ -1,3 +1,10 @@
+---
+layout: default
+title: Platform Architecture
+nav_order: 1
+has_children: false
+---
+
 # Platform Architecture
 
 # Core Extentions

@@ -1,3 +1,10 @@
+---
+layout: default
+title: Java/Jakarta Enterprise Edition
+nav_order: 1
+has_children: false
+---
+
 # Java/Jakarta Enterprise Edition
 
 - developing and deploying multi-tier web-based enterprise applications

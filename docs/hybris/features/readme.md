@@ -1,3 +1,10 @@
+---
+layout: default
+title: Platform Features
+nav_order: 3
+has_children: false
+---
+
 # Platform Features
 
 ## Bulit framework 
