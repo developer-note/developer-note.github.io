@@ -1,5 +1,8 @@
 title: Developer's Note
 description: A short notes of a Developer!
 remote_theme: pmarsceill/just-the-docs
+layout: default
+nav_order: 2
+has_children: true
 plugins:
 - jekyll-remote-theme 
