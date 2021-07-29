@@ -2,7 +2,8 @@
 layout: default
 title: Platform Features
 parent: Hybris
-nav_exclude: true
+nav_order: 3
+has_children: false
 ---
 
 # Platform Features

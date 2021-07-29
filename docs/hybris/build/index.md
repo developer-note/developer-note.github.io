@@ -2,7 +2,8 @@
 layout: default
 title: Building SAP Commerce
 parent: Hybris
-nav_exclude: true
+nav_order: 2
+has_children: false
 ---
 
 # Building SAP Commerce

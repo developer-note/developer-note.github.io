@@ -2,7 +2,8 @@
 layout: default
 title: Workflow
 parent: Hybris
-nav_exclude: true
+nav_order: 4
+has_children: false
 ---
 
 # Workflow
