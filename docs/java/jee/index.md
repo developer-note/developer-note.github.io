@@ -188,7 +188,9 @@ public class SimpleServlet extends HttpServlet {
 	}
 }
 ```
+
 - update the Deployment descriptor `web.xml`
+
 ```xml	
 <web-app>
 	<display-name>Spring Web Application</display-name>
