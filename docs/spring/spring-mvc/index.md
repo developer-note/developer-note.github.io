@@ -21,7 +21,7 @@ has_children: false
 
 ---
 
-## Spring Web MVC framework
+# Spring Web MVC framework
 
 - Spring web MVC framework is request-driven and designed around DispatcherServlet.
 - all incoming requests go through a single servlet - `DispatcherServlet`
@@ -29,7 +29,7 @@ has_children: false
 
 ![](/img/spring/RequestLifecycle.png)
 
-## Dispatcher Servlet
+# Dispatcher Servlet
 
 -  it's a servlet that takes the incoming request, and delegates processing of that request to one of the handlers (Controllers)
 
@@ -53,7 +53,7 @@ has_children: false
 	</servlet-mapping>
 ```
 
-### DispatcherServlet initialization parameters
+## DispatcherServlet initialization parameters
 
 - `contextClass` 
     - default is `XmlWebApplicationContext`
@@ -62,14 +62,14 @@ has_children: false
 - `namespace` 
     - default is `[servlet-name]-servlet`
 
-### Context Hierarchy
+## Context Hierarchy
 
 ![Context Hierarchy](/img/spring/mvc-context-hierarchy.png)
 
 - root should contain all infrastructure beans that should be shared between your other contexts and Servlet instances
 - These inherited beans can be overridden in the servlet-specific scope
 
-### Special bean types in the WebApplicationContext
+## Special bean types in the WebApplicationContext
 
 - Beans
     - `HandlerMapping`
@@ -143,7 +143,7 @@ org.springframework.web.servlet.ViewResolver=org.springframework.web.servlet.vie
 org.springframework.web.servlet.FlashMapManager=org.springframework.web.servlet.support.SessionFlashMapManager
 ```
 
-### DispatcherServlet Processing Sequence
+## DispatcherServlet Processing Sequence
 
 - a request is received by `DispatcherServlet`, then `WebApplicationContext` is bound to it as an attribute, key = `DispatcherServlet.WEB_APPLICATION_CONTEXT_ATTRIBUTE`
 - a locale resolver is bound to the request
@@ -153,7 +153,7 @@ org.springframework.web.servlet.FlashMapManager=org.springframework.web.servlet.
 - corresponding view is returned for a model
 - Handler exception resolver picks up any exception thrown
 
-## Controllers
+# Controllers
 
 - `Handler` of the request
 - interpret user input and transform it into a model that is represented to the user by the view.
@@ -169,19 +169,19 @@ org.springframework.web.servlet.FlashMapManager=org.springframework.web.servlet.
     - `@ModelAttribute`
     - `@ResponseBody`
 
-### URI Template Patterns
+## URI Template Patterns
 
 - URI-like string, containing one or more variable names e.g. `/owners/{ownerId}`
 - use the `@PathVariable` annotation on a method argument to bind it to the value of a URI template variable
 - supports the use of regular expressions in URI template variables `{varName:regex}`
 - ant style path patterns are supported `/owners/*/pets/{petId}` (see `AntPathMatcher`)
 
-###  Media Types
+##  Media Types
 
 - `consumes` - matched only if the `Content-Type` request header matches
 - `produces` - matched only if the `Accept` request header matches
 
-## Handler Mapping
+# Handler Mapping
 
 ![MVC Request Flow](/img/spring/RequestLifecycle-2.png)
 
@@ -197,7 +197,7 @@ public interface HandlerMapping {
 }
 ```
 
-### Types
+## Types
 
 - `BeanNameUrlHandlerMapping`
     - handler sees bean name as URI to match 
@@ -211,7 +211,7 @@ public interface HandlerMapping {
 - `RequestMappingHandlerMapping`
     - maps methods annotated with `@RequestMapping` (type-level and method-level mappings)
 
-### Configuration
+## Configuration
 
 ```xml
 <!--BeanNameUrlHandlerMapping-->
@@ -234,7 +234,7 @@ public interface HandlerMapping {
 <bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping"/>
 ```
 
-## HandlerAdapter
+# HandlerAdapter
 
 - `HandlerAdapter` is responsible to invoke a handler method and to return the response as `ModelAndView` to the `DispatcherServlet`
 - `HandlerMapping` maps a method to a specific URL
@@ -317,7 +317,7 @@ public class SimpleServletHandlerAdapter implements HandlerAdapter {
 
 }
 ```
-### Types of HandlerAdapter
+## Types of HandlerAdapter
 
 - `HttpRequestHandlerAdapter`
     - map the requested URL to `handleRequest()`  of `HttpRequestHandler`
@@ -336,7 +336,7 @@ public class SimpleServletHandlerAdapter implements HandlerAdapter {
 - `RequestMappingHandlerAdapter`
     - handler mapping class `RequestMappingHandlerMapping`
 
-### Configuration
+## Configuration
 
 ```xml
 <bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping"/>
@@ -348,7 +348,7 @@ alternatively, these two can be done by
 ```xml
 <mvc:annotation-driven />
 ```
-### Message converters for Handler Adapter
+## Message converters for Handler Adapter
 
 - `RequestMappingHandlerAdapter` convert the request body to the method argument by using an `HttpMessageConverter`
     - `ByteArrayHttpMessageConverter` converts byte arrays.
@@ -390,7 +390,7 @@ alternatively, using `mvc` namespace
 </mvc:annotation-driven>
 ```
 
-## Handler Interceptor
+# Handler Interceptor
 
 ![Handler Interceptor](/img/spring/RequestLifecycle-3.png)
 
@@ -417,7 +417,7 @@ public interface HandlerInterceptor {
 }
 ```
 
-### HandlerInterceptorAdapter 
+## HandlerInterceptorAdapter 
 
 - we may implement only required methods instead of all three methods
 - deprecated in Spring 5, use `HandlerInterceptor` having default methods
@@ -466,7 +466,7 @@ public abstract class HandlerInterceptorAdapter implements AsyncHandlerIntercept
 }
 ```
 
-### Registering Interceptor
+## Registering Interceptor
 
 - using `mvc` namespace
 
@@ -503,7 +503,7 @@ public abstract class HandlerInterceptorAdapter implements AsyncHandlerIntercept
 </bean>
 ```
 
-## View Resolvers
+# View Resolvers
 
 - Spring enables to render the model to browser via `ViewResolver`
 - all handler methods must resolve to a logical view name
@@ -521,7 +521,7 @@ public interface ViewResolver
 }
 ```
 
-### Types
+## Types
 
 - `AbstractCachingViewResolver`
 - `XmlViewResolver`
@@ -531,7 +531,7 @@ public interface ViewResolver
 - `VelocityViewResolver` / `FreeMarkerViewResolver`
 - `ContentNegotiatingViewResolver`
 
-### Configuration
+## Configuration
 
 - InternalResourceViewResolver
 ```xml
@@ -578,23 +578,23 @@ hello.(class) = org.springframework.web.servlet.view.JstlView
 hello.url = /WEB-INF/jsp/hello.jsp
 ```
 
-### Redirecting to Views
+## Redirecting to Views
 
 - For `InternalResourceView`, the servlet calls `RequestDispatcher.forward(..)` or `RequestDispatcher.include()`
 - `redirect:` prefix tells the `UrlBasedViewResolver` that effectively the controller had returned a `RedirectView`
 - For `RedirectView`, the servlet calls `HttpServletResponse.sendRedirect()`
 - `forward:` prefix tells the `UrlBasedViewResolver` that effectively the controller had returned a `InternalResourceView`
 
-### Flash Attributes
+## Flash Attributes
 
 - a way for one request to store attributes intended for use in another in a `Post/Redirect/Get` pattern
 - they are saved in `session` before redirect, and made available in the redirect request and it is removed immediately
 
-## Exception handling 
+# Exception handling 
 
 ![Exception Handling Flow](/img/spring/exception-handling-flow-annotation.png)
 
-### HandlerExceptionResolver
+## HandlerExceptionResolver
 
 - to resolve exceptions thrown during processing an HTTP request.
 
@@ -608,7 +608,7 @@ public interface HandlerExceptionResolver {
 	ModelAndView resolveException(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex);
 }
 ```
-### Types
+## Types
 
 - `DefaultHandlerExceptionResolver` resolves standard spring exceptions to thier error codes (HTTP 4xx or 5xx)
 - `SimpleMappingExceptionResolver` allows to take the class name of any exception that might be thrown and map it to a view name.
@@ -621,7 +621,7 @@ public interface HandlerExceptionResolver {
     - `@ResponseStatus` annotation available on custom exceptions and to map these exceptions to HTTP status codes.
 - custom exception resolvers can extend `AbstractHandlerExceptionResolver`
 
-### Configuration
+## Configuration
 
 - `SimpleMappingExceptionResolver`
 
@@ -688,7 +688,7 @@ public class MyResourceNotFoundException extends RuntimeException {
 }
 ```
 
-### Controller Advice
+## Controller Advice
 
 -  implement common processes which are to be executed in multiple Controllers.
     - method with `@InitBinder`

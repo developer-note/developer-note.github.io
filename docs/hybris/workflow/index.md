@@ -8,6 +8,21 @@ has_children: false
 
 # Workflow
 
+{: .no_toc }
+
+<details open markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+1. TOC
+{:toc}
+</details>
+
+---
+
+## Workflow
+
 - it is techinically a cronjob ( `WorkflowModel extends CronJobModel`) but not fully automated and required decisions on each action. `WorkflowTemplate` is the job definition ( `WorkflowTemplateModel extends JobModel` ).
 
 ## Key Concepts

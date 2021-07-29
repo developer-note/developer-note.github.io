@@ -8,6 +8,19 @@ has_children: false
 
 # Platform Features
 
+{: .no_toc }
+
+<details open markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+1. TOC
+{:toc}
+</details>
+
+---
+
 ## Bulit framework 
 
 - uses ant build scripts to run tasks that extension compilation, code generation, copying and compilation

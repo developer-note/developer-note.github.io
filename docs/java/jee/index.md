@@ -21,7 +21,7 @@ has_children: false
 
 ---
 
-## JEE
+# JEE
 
 - developing and deploying multi-tier web-based enterprise applications
 - 4 modules
@@ -30,7 +30,7 @@ has_children: false
     - Business Component (Enterprise JavaBeans)
     - Resource Adapter Module
 
-## Web Container / Servler Container
+# Web Container / Servler Container
 
 - manager the lifecycle of Servlets, security, deployment, and threading
 - provides 
@@ -41,7 +41,7 @@ has_children: false
     - `JSP support`  
 - e.g. Apache Tomcat GlassFish, JBoss, WebLogic Application Server, IBM Websphere Application Server
 
-## `Servlet`
+# `Servlet`
 
 ![Servlet Invocation](/img/java/servlet-invocation.png)
 
@@ -75,7 +75,7 @@ public interface Servlet {
 }
 ```
 
-## `ServletConfig`
+# `ServletConfig`
 
 - an object created by the web container for each Servlet that has configuration information from Deployment Descriptor (`web.xml`)
 
@@ -115,7 +115,7 @@ ServletConfig config = getServletConfig();
 String parametervalue = config.getInitParameter("parametername");  
 ```
 
-## `ServletContext`
+# `ServletContext`
 
 - an object that is used to interact with the Servlet container
 - one context per "web application" per Java Virtual Machine
@@ -137,7 +137,7 @@ ServletContext application = getServletContext();
 </web-app>  
 ```
 
-## ServletConvig Vs ServletContext
+# ServletConvig Vs ServletContext
 
 |`ServletConfig`|`ServletContext`|
 |---------------|----------------|
@@ -148,7 +148,7 @@ ServletContext application = getServletContext();
 |`<init-param>` inside `<servlet>`|`<context-param>` inside `<web-app>`|
 |cannot set attributes|can set attributes|
 
-## `HttpServlet`
+# `HttpServlet`
 
 - an abstract class which provides HTTP specific methods
 - extends `GenericServlet`
@@ -205,7 +205,7 @@ public class SimpleServlet extends HttpServlet {
 </web-app>
 ```
 
-## Load on startup
+# Load on startup
 
 - servlets are loaded when the first request
 - `load-on-startup` will load the `web.xml`
@@ -224,7 +224,7 @@ public class SimpleServlet extends HttpServlet {
 </servlet>  
 ```
 
-## RequestDispatcher
+# RequestDispatcher
 
 - provides the facility of dispatching the request to another resource it may be html, servlet or jsp. 
 - also be used to include the content of another resource
@@ -247,7 +247,7 @@ rd.forward(request, response);
 RequestDispatcher rd=request.getRequestDispatcher("/index.html");  
 rd.include(request, response);  
 ```
-## SendRedirect
+# SendRedirect
 
 - used to redirect response to another resource, it may be servlet, jsp or html file 
 - relative or absolute url
@@ -256,7 +256,7 @@ rd.include(request, response);
 response.sendRedirect("http://www.google.com"); 
 ```
 
-## forward() vs sendRedirect()
+# forward() vs sendRedirect()
 
 |`forward()`|`sendRedirect()`|
 |-----------|----------------|
@@ -266,7 +266,7 @@ response.sendRedirect("http://www.google.com");
 |can work within the server only|can be used within and outside the server|
 |End User can see on which page, url is redirected|End User can see on which page, url is redirected|
 
-## sendError()
+# sendError()
 
 - sends a status code (usually 404) along with a short message that is automatically formatted inside an HTML document and sent to the client
 
@@ -274,7 +274,7 @@ response.sendRedirect("http://www.google.com");
 response.sendError(407, "Need authentication!!!" );
 ```
 
-## setIntHeader()
+# setIntHeader()
 
 - you can make a webpage in such a way that it would refresh automatically after a given interval
 
@@ -282,7 +282,7 @@ response.sendError(407, "Need authentication!!!" );
 response.setIntHeader("Refresh", 5);
 ```
 
-## Session Tracking
+# Session Tracking
 
 - session means particular interval of time
 - sometimes we need to maintain state, but HTTP is stateless (every request is new)
@@ -293,7 +293,7 @@ response.setIntHeader("Refresh", 5);
     - `URL rewriting`
     - `HttpSession`
 
-## Cookie
+# Cookie
 
 - a small piece of information that is persisted between the multiple client requests.
 - two types
@@ -301,7 +301,7 @@ response.setIntHeader("Refresh", 5);
     - Non-persistant Cookie - removed only by logout
 - `javax.servlet.http.Cookie`
 
-## Cookie management
+# Cookie management
 
 **Create Cookie**
 
@@ -326,7 +326,7 @@ for(int i=0;i<ck.length;i++){
 }  
 ```
 
-## HttpSession 
+# HttpSession 
 
 - container creates a session id for each user
 - used to 
@@ -334,7 +334,7 @@ for(int i=0;i<ck.length;i++){
     - view and manipulate information about a session
 - can be obtained by `HttpServletRequest.getSession()` or `HttpServletRequest.getSession(Boolean createNew)` 
 
-## Deleting Session Data
+# Deleting Session Data
 
 - `removeAttribute(String name)`
 - `invalidate()`
@@ -347,7 +347,7 @@ for(int i=0;i<ck.length;i++){
     </session-config>
     ```
 
-## Event and Listeners
+# Event and Listeners
 
 - two levels of servlet events:
 
@@ -377,7 +377,7 @@ for(int i=0;i<ck.length;i++){
 </listener>
 ```
 
-## Servlet Filter
+# Servlet Filter
 
 - is an object that is invoked at the preprocessing and postprocessing of a request
 - Filter API has the following
@@ -429,7 +429,7 @@ public interface FilterConfig {
 }
 ```
 
-## ServletInputStream and ServletOutputStream 
+# ServletInputStream and ServletOutputStream 
 
 - `ServletInputStream`
     -  provides stream to read binary data such as image etc. from the request object. It is an abstract class.
@@ -438,7 +438,7 @@ public interface FilterConfig {
     - provides a stream to write binary data into the response. It is an abstract class.
     - `getOutputStream()` method of `ServletResponse` interface
 
-## Error Handling
+# Error Handling
 
 - when error is thrown in Servlet, the web container checks the web.xml to find a match 
 - match can be on error-code or exception-type
@@ -466,7 +466,7 @@ public interface FilterConfig {
 </error-page>
 ```
 
-## Servlet with Annotation 
+# Servlet with Annotation 
 
 - With the adoption of the version 3.0 of Servlet APIs, the `web.xml` file has become optional
     - `@WebServlet`

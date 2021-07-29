@@ -21,17 +21,17 @@ has_children: false
 
 ---
 
-## Spring framework
+# Spring framework
 
 - a comprehensive programming and configuration model that reduces the complexity of developing modern Java-based enterprise applications
 - key element of Spring is infrastructural support at the application level
 - teams can focus on application-level business logic, without unnecessary ties to specific deployment environments
 
-## Modules in Spring framework
+# Modules in Spring framework
 
 ![Spring Modules](/img/spring/spring-overview.png)
 
-## Benefits of Using Spring
+# Benefits of Using Spring
 
 - targets to make Jakarta EE development easier.
 - `Lightweight`
@@ -42,7 +42,7 @@ has_children: false
 - `Transaction management` of DB, File operations
 - `Exception handling` - technology-specific exceptions into consistent, unchecked exceptions
 
-## Inversion of Control
+# Inversion of Control
 
 - in traditional programming, where the program flow controls its execution, 
 - in the IOC principle, the program delegates the control to something else like a Framework or Container which will drive the flow
@@ -53,7 +53,7 @@ has_children: false
     - greater modularity of a program
     - greater ease in testing a program by isolating a component or mocking its dependencies, and allowing components to communicate through contracts
 
-## Dependency Injection
+# Dependency Injection
 
 - the class is no longer responsible for instantiating the objects it requires. Those responsibilities are passed to independent services.
 - Dependency injection involves four roles:
@@ -64,7 +64,7 @@ has_children: false
 
 ![Dependency Injection](/img/spring/dependency-injection.jpg)
 
-## Bean Injection
+# Bean Injection
 
 - `Setter Injection` using `<property>` or `@Autowired` on setter method (Optional dependencies)
 - `Constructor Injection` using `<constructor-arg>` or `@Autowired` on constructor (Mandatory dependencies)
@@ -94,7 +94,7 @@ has_children: false
     ```
 
 
-## Spring IoC Container
+# Spring IoC Container
 
 - it implements IoC
 - responsible for instantiating, configuring and assembling objects known as `Beans`, as well as managing their life cycles.
@@ -106,7 +106,7 @@ has_children: false
     - For Web application 
         - `WebApplicationContext` 
 
-## Spring Bean
+# Spring Bean
 
 - Java Objects that are initialized by the Spring IoC container
 - Scopes
@@ -117,7 +117,7 @@ has_children: false
     - `global-session` - one instance per HTTP session lifecycle (in context of Portlet web application)
 - beans are not thread safe by default, implementation should take care of thread safety
 
-## Bean Definiton configuration (meta data)
+# Bean Definiton configuration (meta data)
 
 - `XML-Based configuration`
 
@@ -149,11 +149,11 @@ has_children: false
     ```
 - in order to maintain the configuration, multiple configuration files is recommended which can be imported (`<import>` or `@Import`) in the main configuration
 
-## Configuration Lifecycle
+# Configuration Lifecycle
 
 ![Configuration Lifecycle](/img/spring/spring-configuration-lifecycle.png)
 
-## Bean Lifecycle
+# Bean Lifecycle
 
 ![Bean Life Cycle](/img/spring/bean-lifecycle-2.jpg)
 
@@ -324,7 +324,7 @@ destroy
 destroyMethod
 ```
 
-## Bean wiring
+# Bean wiring
 
 - IoC combines all bean together i.e. tie them together using Dependency Injection
 - modes (`autowire=` attribute in `<bean>`)
@@ -339,17 +339,17 @@ destroyMethod
     - Confusing Nature - hard to autowire when lot of dependencies 
 - inner beans which are declared in `property` cannot be reused
 
-## Bean Definition Template
+# Bean Definition Template
 
 - a child bean definiton inherits configuration from parent bean definition
 - child may override or add additional values
 - parent bean definition is maked as `abstract="true"` and class attribute is not neccessary, hence it cannot be instantiated
 
-## Annotations 
+# Annotations 
 
 - rely on the bytecode metadata for wiring up components instead of angle-bracket declarations
 
-## Wiring using Annotations
+# Wiring using Annotations
 
 - `@Resource` - `javax.annotation`
     - ByName
@@ -362,19 +362,19 @@ destroyMethod
 - `@Inject` - `javax.inject`
     - same as `@Autowired`
 
-## Lifecycle Hooks
+# Lifecycle Hooks
 
 - `@PostConstruct`
 - `@PreDestroy`
 
-## Sterotype Annotations
+# Sterotype Annotations
 
 - `@Component` - generic sterotype for Spring managed component
 - `@Repository` for Data Access Object (DAO)
 - `@Service`  
 - `@Controller` 
 
-## Autodetect class for bean registration
+# Autodetect class for bean registration
 
 - done through component scanning 
 - can add custom filter for scanning
@@ -414,7 +414,7 @@ public class AppConfig  {
     </context:component-scan>
 </beans>
 ```
-## AnnotationConfigApplicationContext
+# AnnotationConfigApplicationContext
 
 - instantiated by `@Configuration` class or `@Component` class having bean definition
 
@@ -427,7 +427,7 @@ ApplicationContext ctx = new AnnotationConfigApplicationContext(MyServiceImpl.cl
 
 ```
 
-## Injecting inter-bean dependencies
+# Injecting inter-bean dependencies
 
 ```java
 @Configuration
@@ -445,7 +445,7 @@ public class AppConfig {
 }
 ```
 
-## @Import annotation
+# @Import annotation
 
 ```java
 @Configuration
@@ -483,9 +483,9 @@ public static void main(String[] args) {
     transferService.transfer(100.00, "A123", "C456");
 }
 ```
-## Combining Java and XML configuration
+# Combining Java and XML configuration
 
-### XML-centric use of `@Configuration` classes
+## XML-centric use of `@Configuration` classes
     
 **AppConfig.java**
 
@@ -551,7 +551,7 @@ public static void main(String[] args) {
 
 ```
 
-### `@Configuration` class-centric use of XML with `@ImportResource`
+## `@Configuration` class-centric use of XML with `@ImportResource`
 
 **AppConfig.java**
 
@@ -600,7 +600,7 @@ public static void main(String[] args) {
 }
 ```
 
-## References
+# References
 
 - [`BeanFactory`](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/beans/factory/BeanFactory.html) 
 - [`ApplicationContext`](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/context/ApplicationContext.html)

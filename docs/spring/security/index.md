@@ -21,7 +21,7 @@ has_children: false
 
 ---
 
-## Security Aspects
+# Security Aspects
 
 - `Confidentiality`
     - privacy of the system
@@ -32,7 +32,7 @@ has_children: false
     - continuity of the authorized access to the system
     - opposite of availability is *denial of service*
 
-## Spring Security Framework
+# Spring Security Framework
 
 - comprehensive security solutions for J2EE applications
 - provides several configurable servlet filters to provide authentication and authorization
@@ -50,7 +50,7 @@ has_children: false
     - Anonymous authentication
     - Custom authentication systems
 
-## Outline
+# Outline
 
 ![Spring Security Arcchitecture](/img/spring/security-filter-chain.png)
 
@@ -64,7 +64,7 @@ has_children: false
 - 
 ![Spring Authentication and Authorization](/img/spring/security-authenticate-authorize.png)
 
-## Modules
+# Modules
 
 - Core (`spring-security-core`): Spring security's core classes and interfaces on authentication and access control reside here.
 - Remoting (`spring-security-remoting`): In case you need Spring Remoting
@@ -87,7 +87,7 @@ has_children: false
 - `spring-security-saml`: Bringing the SAML 2.0 service provider capabilities to Spring applications.
 - `spring-security-kerberos`: Bringing easy integration of Spring application with Kerberos protocol.
 
-## `DelegatingFilterProxy`
+# `DelegatingFilterProxy`
 
 - it is a Servlet Filter 
 - any request that reaches the web application, this proxy makes sure to delegate the request to Spring Security
@@ -114,29 +114,29 @@ has_children: false
 
 ![DelegatingFilterProxy](/img/spring/delegatingfilterproxy.jpg)
 
-## `FilterChainProxy` 
+# `FilterChainProxy` 
 
-## SecurityFilterChain
+# SecurityFilterChain
 
-### SecurityContextPersistenceFilter
+## SecurityContextPersistenceFilter
 
-### HeaderWriterFilter
+## HeaderWriterFilter
 
-### CsrfFilter
+## CsrfFilter
 
-### LogoutFilter
+## LogoutFilter
 
-### UsernamePasswordAuthenticationFilter
+## UsernamePasswordAuthenticationFilter
 
-### BasicAuthenticationFilter
+## BasicAuthenticationFilter
 
-### RequestCacheAwareFilter
+## RequestCacheAwareFilter
 
-### SecurityContextHolderAwareRequestFilter
+## SecurityContextHolderAwareRequestFilter
 
-### AnonymousAuthenticationFilter
+## AnonymousAuthenticationFilter
 
-## WebSecurityConfigurerAdapter 
+# WebSecurityConfigurerAdapter 
 
 - `configure(AuthenticationManagerBuilder auth)`
     - This method can be overriden to configure application-specific user realms into Spring Security.
@@ -144,11 +144,11 @@ has_children: false
     - This method can be overriden to ignore certain requests.
 - `configure(HttpSecurity http)`
     - This method can be overriden to configure certain url matches and their filter bindings.
-### HttpSecurity
+## HttpSecurity
 
-### antMatcher
+## antMatcher
 
-### requestMatchers
+## requestMatchers
 
-## Reference
+# Reference
 - [Spring Security 4.2.x](https://docs.spring.io/spring-security/site/docs/4.2.x/reference/htmlsingle/)
