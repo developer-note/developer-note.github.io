@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Spring Core Concepts
+parent: Spring Framework
 nav_order: 1
 has_children: false
 ---

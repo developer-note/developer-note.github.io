@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Spring Security
+parent: Spring Framework
 nav_order: 3
 has_children: false
 ---
