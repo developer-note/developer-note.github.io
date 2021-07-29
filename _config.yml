@@ -1,5 +1,5 @@
 title: Developer's Note
 description: A short notes of a Developer!
-remote_theme: pages-themes/minimal@v0.2.0
+remote_theme: pmarsceill/just-the-docs
 plugins:
 - jekyll-remote-theme 
