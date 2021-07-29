@@ -137,7 +137,7 @@ ServletContext application = getServletContext();
 </web-app>  
 ```
 
-# ServletConvig Vs ServletContext
+# ServletConfig Vs ServletContext
 
 |`ServletConfig`|`ServletContext`|
 |---------------|----------------|
