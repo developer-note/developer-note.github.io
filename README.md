@@ -1,4 +1,11 @@
-# Developer Notes
+---
+layout: default
+title: Developer's Note
+nav_order: 1
+has_children: true
+---
+
+# Developer's Note
 
 ## [Java](/docs/java)
 
