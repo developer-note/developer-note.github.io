@@ -2,17 +2,17 @@
 
 ## Java
 
-- [Java EE/ Jakarta EE](/java/jee)
+- [Java EE/ Jakarta EE](/docs/java/jee)
 
 ## Spring Framework
 
-- [Spring Core Concepts](/spring/spring-core)
-- [Spring MVC Concepts](/spring/spring-mvc)
-- [Spring Security](/spring/security)
+- [Spring Core Concepts](/docs/spring/spring-core)
+- [Spring MVC Concepts](/docs/spring/spring-mvc)
+- [Spring Security](/docs/spring/security)
 
 ## Hybris
 
 ### Platform, Services and Utilities
 
-- [Platform Features](/hybris/features)
-- [Platform Architecture](/hybris/architecture)
+- [Platform Features](/docs/hybris/features)
+- [Platform Architecture](/docs/hybris/architecture)
