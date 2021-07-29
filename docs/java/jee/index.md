@@ -8,6 +8,21 @@ has_children: false
 
 # Java/Jakarta Enterprise Edition
 
+{: .no_toc }
+
+<details open markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+1. TOC
+{:toc}
+</details>
+
+---
+
+## JEE
+
 - developing and deploying multi-tier web-based enterprise applications
 - 4 modules
     - Application Client (Applets, Application client, etc)

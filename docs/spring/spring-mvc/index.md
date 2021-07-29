@@ -8,6 +8,19 @@ has_children: false
 
 # Spring MVC 
 
+{: .no_toc }
+
+<details open markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+1. TOC
+{:toc}
+</details>
+
+---
+
 ## Spring Web MVC framework
 
 - Spring web MVC framework is request-driven and designed around DispatcherServlet.

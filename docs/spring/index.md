@@ -6,7 +6,3 @@ has_children: true
 ---
 
 # Spring Framework
-
-- [Spring Core Concepts](/docs/spring/spring-core)
-- [Spring MVC Concepts](/docs/spring/spring-mvc)
-- [Spring Security](/docs/spring/security)

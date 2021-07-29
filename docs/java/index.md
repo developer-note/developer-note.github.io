@@ -6,5 +6,3 @@ has_children: true
 ---
 
 # Java
-
-- [Java EE/ Jakarta EE](/docs/java/jee)
