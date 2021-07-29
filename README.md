@@ -1,16 +1,16 @@
 # Developer Notes
 
-## Java
+## [Java](/docs/java)
 
 - [Java EE/ Jakarta EE](/docs/java/jee)
 
-## Spring Framework
+## [Spring Framework](docs/spring)
 
 - [Spring Core Concepts](/docs/spring/spring-core)
 - [Spring MVC Concepts](/docs/spring/spring-mvc)
 - [Spring Security](/docs/spring/security)
 
-## Hybris
+## [Hybris](/docs/hybris)
 
 ### Platform, Services and Utilities
 
