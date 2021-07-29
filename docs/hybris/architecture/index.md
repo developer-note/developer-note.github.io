@@ -2,7 +2,7 @@
 layout: default
 title: Platform Architecture
 parent: Hybris
-nav_order: 1
+nav_order: 100
 has_children: false
 ---
 
