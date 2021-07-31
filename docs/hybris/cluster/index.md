@@ -1,11 +1,11 @@
 ---
 layout: default
-title: Cron Job
+title: Cluster
 parent: Hybris
 has_children: false
 ---
 
-# Cron Job
+# Cluster
 
 {: .no_toc }
 

@@ -2,7 +2,6 @@
 layout: default
 title: Backoffice Framework
 parent: Hybris
-nav_order: 900
 has_children: false
 ---
 

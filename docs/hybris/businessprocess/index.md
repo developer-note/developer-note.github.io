@@ -2,7 +2,6 @@
 layout: default
 title: Business Process
 parent: Hybris
-nav_order: 700
 has_children: false
 ---
 

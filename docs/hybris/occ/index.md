@@ -2,7 +2,6 @@
 layout: default
 title: Omni Commerce Connect
 parent: Hybris
-nav_order: 1100
 has_children: false
 ---
 

@@ -1,11 +1,11 @@
 ---
 layout: default
-title: Cron Job
+title: Service Layer
 parent: Hybris
 has_children: false
 ---
 
-# Cron Job
+# Service Layer
 
 {: .no_toc }
 

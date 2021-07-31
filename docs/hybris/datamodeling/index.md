@@ -2,7 +2,6 @@
 layout: default
 title: Data Modeling
 parent: Hybris
-nav_order: 400
 has_children: false
 ---
 

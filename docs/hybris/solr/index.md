@@ -2,7 +2,6 @@
 layout: default
 title: Solr Search
 parent: Hybris
-nav_order: 800
 has_children: false
 ---
 

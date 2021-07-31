@@ -2,7 +2,6 @@
 layout: default
 title: Workflow
 parent: Hybris
-nav_order: 1000
 has_children: false
 ---
 

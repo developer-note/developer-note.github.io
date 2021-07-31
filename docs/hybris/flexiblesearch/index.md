@@ -1,11 +1,11 @@
 ---
 layout: default
-title: Cron Job
+title: Flexible Search
 parent: Hybris
 has_children: false
 ---
 
-# Cron Job
+# Flexible Search
 
 {: .no_toc }
 
