@@ -47,20 +47,23 @@ public class MyJob extends AbstractJobPerformable<CronJobModel>
   }
 }
 ```
+
 - implement `JobPerformable<CronJobModel>` or extend `AbstractJobPerformable<CronJobModel>`
-    ```java
-    package de.hybris.platform.servicelayer.cronjob;
 
-    import de.hybris.platform.cronjob.model.CronJobModel;
+```java
+package de.hybris.platform.servicelayer.cronjob;
 
-    public interface JobPerformable<T extends CronJobModel> {
-      PerformResult perform(T var1);
+import de.hybris.platform.cronjob.model.CronJobModel;
 
-      boolean isPerformable();
+public interface JobPerformable<T extends CronJobModel> {
+  PerformResult perform(T var1);
 
-      boolean isAbortable();
-    }
-    ```
+  boolean isPerformable();
+
+  boolean isAbortable();
+}
+```
+
 - `CronJobResult`
     - `ERROR`
     - `FAILURE`
