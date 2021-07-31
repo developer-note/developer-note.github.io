@@ -1,11 +1,11 @@
 ---
 layout: default
-title: Service Layer
+title: Interceptor
 parent: Hybris
 has_children: false
 ---
 
-# Service Layer
+# Interceptor
 
 {: .no_toc }
 
