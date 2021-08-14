@@ -2,7 +2,7 @@
 layout: default
 title: Design Patterns
 parent: Java
-nav_order: 1
+nav_order: 20
 has_children: false
 ---
 
@@ -43,12 +43,16 @@ has_children: false
 - some control the number of instances on the whole JVM 
     - `Singleton`
 
+> `Simple Factory` (not a design pattern) also belong to Factory Pattern family
+
 ## Factory method
 
 - defines a method, which should be used for creating objects instead of direct constructor call
 - other names - Virtual Constructor or Factory Template Pattern
 
-### JDK examples
+> Design principle: **Encapsulate what varies**
+
+### JDK Examples
 
 - `getInstance()` method of `java.util.Calendar`, `NumberFormat`, and `ResourceBundle` uses factory method design pattern. 
 - `java.lang.Class.newInstance()`
@@ -56,11 +60,11 @@ has_children: false
 - `java.nio.charset.Charset.forName()`, `java.lang.Class.forName()`
 - `java.sql.DriverManager#getConnection()`, `java.net.URL.openConnection()`
 
-## Diagram
+### Diagram
 
 ![Factory Method](/img/java/FactoryMethod.png)
 
-## Example
+### Example
 
 ```java
 public class FactoryMethodApp {
@@ -131,6 +135,8 @@ class DatabaseLogger implements Logger {
 ### Diagram
 
 ![Abstract Factory Method](/img/java/AbstractFactory.png)
+
+### Example
 
 ```java
 
@@ -244,5 +250,89 @@ class FurnitureClient{
 		table.make();
 		chair.make();
 	}
+}
+```
+
+# Simple Factory Vs Factory Method vs Abstract Factory
+
+## Factory 
+
+- it is fixed no new subclassing
+
+```java
+class FruitFactory {
+
+  public Apple makeApple() {
+    // Code for creating an Apple here.
+  }
+
+  public Orange makeOrange() {
+    // Code for creating an orange here.
+  }
+}
+```
+
+## Factory Method
+
+- generally used when you have some generic processing in a class, but want to vary which kind of fruit you actually use.
+
+> an interface for creating an object, but let subclasses decide which class to instantiate
+
+```java
+abstract class FruitPicker {
+
+  protected abstract Fruit makeFruit();
+
+  // this method is what make the difference
+  public void pickFruit() {
+    private final Fruit f = makeFruit(); // The fruit we will work on..
+
+  }
+}
+
+class OrangePicker extends FruitPicker {
+
+  @Override
+  protected Fruit makeFruit() {
+    return new Orange();
+  }
+}
+```
+
+## Abstract Factory
+
+- normally used for things like dependency injection/strategy
+- when you want to be able to create a whole family of objects that need to be of "the same kind", and have some common base classes
+-  we want to make sure that we don't accidentally use an OrangePicker on an Apple 
+
+> Provide an interface for creating families of related or dependent objects without specifying their concrete classes.
+
+```java
+interface PlantFactory {
+  
+  Plant makePlant();
+
+  Picker makePicker(); 
+
+}
+
+public class AppleFactory implements PlantFactory {
+  Plant makePlant() {
+    return new Apple();
+  }
+
+  Picker makePicker() {
+    return new ApplePicker();
+  }
+}
+
+public class OrangeFactory implements PlantFactory {
+  Plant makePlant() {
+    return new Orange();
+  }
+
+  Picker makePicker() {
+    return new OrangePicker();
+  }
 }
 ```
