@@ -158,7 +158,7 @@ class RouterFactory{
 }
 ```
 
-!['Null Object Pattern'](/img/java/NullObject.PNG)
+!['Null Object Pattern'](/img/java/NullObject.png)
 
 ### Optionals 
 
