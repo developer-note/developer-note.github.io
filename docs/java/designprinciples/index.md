@@ -90,7 +90,7 @@ has_children: false
 ### Refactoring
 
 - we can use inheritance to apply this principle but introduces tight coupling (Parent child relation)
-- better approach would be to use Strategy Pattern, where we create an interface and implement in both classes (same methods are present but less coupling), the use a Factory to create the instances for different types  
+- better approach would be to use Strategy Pattern, where we create an interface and implement in both classes (same methods are present but less coupling), then use a Factory to create the instances for different types  
 
 ### Public APIs
 
@@ -176,7 +176,7 @@ for (Task t : tasks){
 
 > High-level modules should not depend on low-level modules. Both should depend on abstractions. Abstractions should not depend on details. Details should depend on abstractions.
 
-![Dependency Inversion Principle](/img/java/dependency-inversion-principle.png)
+![Dependency Inversion Principle](/img/java/dependency-inversion-principle.PNG)
 
 - high level modules (e.g Payment, User Management etc.,)
     - modules that solve the real problems and use cases - more abstract and mapped to business domain
