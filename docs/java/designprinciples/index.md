@@ -35,8 +35,9 @@ has_children: false
 
 - cost of prioritizing fast delivery over code quality for longer period of time
 - it is ok to chose Fast delivery over Code quality but always chosing leads to high technical debt
-- `Cost of Change` increases over the years
-- `Customer Responsiveness` decreases over the years
+- always pay techinical debt
+    - `Cost of Change` increases over the years
+    - `Customer Responsiveness` decreases over the years
 
 # SOLID
 
@@ -47,10 +48,10 @@ has_children: false
     - I - Interface Segregation Principle
     - D - Dependency Inversion Principle
 - mostly effective when they applied together
-- Other ways to maintain the Architecture clean
-    - Code refactoring
-    - Design pattern
+- Other ways to maintain the clean clode
+    - Continous Code refactoring
     - Unit testing (TDD)
+    - Design pattern
 
 ## Single Responsibility Principle (SRP)
 
