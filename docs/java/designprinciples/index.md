@@ -204,4 +204,10 @@ for (Task t : tasks){
     - increase the program modularity
     - manages the lifecycle of objects and their configuration
 
+# Other Design Principles
 
+- Principle of least astonishment
+- Don't repeat yourself
+- Descriptive and Meaningful Phrases
+- Write Everything Twice 
+- Command query separation
