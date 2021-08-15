@@ -2,7 +2,7 @@
 layout: default
 title: Applying Functional Programming Techniques
 parent: Best Practices
-nav_order: 4
+nav_order: 5
 has_children: false
 ---
 
