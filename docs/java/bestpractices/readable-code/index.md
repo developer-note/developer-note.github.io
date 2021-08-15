@@ -2,6 +2,7 @@
 layout: default
 title: Writing Readable Code
 parent: Best Practices
+grand_parent: Java
 nav_order: 3
 has_children: false
 ---

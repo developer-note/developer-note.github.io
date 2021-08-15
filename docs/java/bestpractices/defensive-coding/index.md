@@ -2,6 +2,7 @@
 layout: default
 title: Defensive Coding
 parent: Best Practices
+grand_parent: Java
 nav_order: 2
 has_children: false
 ---

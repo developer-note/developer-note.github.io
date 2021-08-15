@@ -3,6 +3,7 @@ layout: default
 title: Performance Tuning
 parent: Best Practices
 nav_order: 4
+grand_parent: Java
 has_children: false
 ---
 

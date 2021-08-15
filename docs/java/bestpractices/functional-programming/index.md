@@ -2,6 +2,7 @@
 layout: default
 title: Applying Functional Programming Techniques
 parent: Best Practices
+grand_parent: Java
 nav_order: 5
 has_children: false
 ---
