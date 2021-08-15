@@ -6,8 +6,6 @@ nav_order: 1
 has_children: false
 ---
 
-# Spring Core Concepts
-
 {: .no_toc }
 
 <details open markdown="block">

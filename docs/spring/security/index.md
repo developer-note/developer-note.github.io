@@ -6,8 +6,6 @@ nav_order: 3
 has_children: false
 ---
 
-# Spring Security
-
 {: .no_toc }
 
 <details open markdown="block">
@@ -20,6 +18,9 @@ has_children: false
 </details>
 
 ---
+
+
+# Spring Security
 
 # Security Aspects
 

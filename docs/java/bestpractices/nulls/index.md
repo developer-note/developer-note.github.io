@@ -7,9 +7,6 @@ nav_order: 1
 has_children: false
 ---
 
-
-# Working with Nulls
-
 {: .no_toc }
 
 <details open markdown="block">

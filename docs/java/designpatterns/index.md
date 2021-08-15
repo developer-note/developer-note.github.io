@@ -6,8 +6,6 @@ nav_order: 20
 has_children: false
 ---
 
-# Design Patterns
-
 {: .no_toc }
 
 <details open markdown="block">

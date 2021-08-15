@@ -6,8 +6,6 @@ nav_order: 100
 has_children: false
 ---
 
-# Java/Jakarta Enterprise Edition
-
 {: .no_toc }
 
 <details open markdown="block">
@@ -21,7 +19,7 @@ has_children: false
 
 ---
 
-# JEE
+# Java/Jakarta Enterprise Edition
 
 - developing and deploying multi-tier web-based enterprise applications
 - 4 modules

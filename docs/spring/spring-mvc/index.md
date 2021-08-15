@@ -6,8 +6,6 @@ nav_order: 2
 has_children: false
 ---
 
-# Spring MVC 
-
 {: .no_toc }
 
 <details open markdown="block">

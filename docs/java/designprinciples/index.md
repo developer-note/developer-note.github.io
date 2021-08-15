@@ -6,8 +6,6 @@ nav_order: 10
 has_children: false
 ---
 
-# Design Prinicples
-
 {: .no_toc }
 
 <details open markdown="block">
