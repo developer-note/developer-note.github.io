@@ -25,20 +25,23 @@ has_children: false
 - guarding against errors you don’t expect
 - cost of fixing the bug increases from stage to stage  ( Analysis and Design > Dev and Unit test > QA > Prod) 
 - the sooner we find the bug, the better
+- two ways
+  - Reacting early
+  - Preventing
 
 # Validating Method Input
 
 ## Guard Clause
 
 - Errors should be identified as early as possible
-- place the Guard clauses at the very begining of the method
-- Fail Early
-  - React : guard clauses in method
-  - Prevent : guard clauses in constructors
+- guard clauses in methods and constructors
 - three options 
   - Return early (return false or nothing)
   - Fail fast (throw exception)
   - alternative execution (showing a user friendly message)
+- Fail Early
+  - place the Guard clauses at the very begining of the method
+  - avoid unneccessary computations
 
 ## Validating null
 
@@ -51,7 +54,7 @@ has_children: false
 ## Validating Number 
 
 - careful about the range of number (Zero, Postitive or negative, etc)
-- careful about the operator (&& and ||)
+- careful about the operator ( `&&` and `||` )
 - avoid dividing by zero
 - avoid zero numerator as well 
 
@@ -61,18 +64,16 @@ has_children: false
 - refactoring techinque - `Decompose conditional` (extracting into a method)
 - REGEX conditions for complex string validations(like email)
 - use `Enum` appropriately (provide type safe)
-- null safe version of `equals()` `"String".equals(inputString)`
+- null safe version of `equals()` e.g. `"String".equals(inputString)`
 
 ## Validating Dates
 
 - Don't
-  - `java.util.Date` ()
-  - muttable and not thread safe
+  - `java.util.Date` (muttable and not thread safe)
   - don't use it as String
   - don't use Regex to validate
 - Do's
-  - `java.time` packages - `LocalDate`, `LocalTime`, `Instant`
-  - immutable and thread safe
+  - `java.time` packages - `LocalDate`, `LocalTime`, `Instant` (immutable and thread safe)
   - store date as date and time objects 
   - use `LocalDate.parse()` method to validate (throws `DateTimeParseException`)
 - `java.util.Date` requires Defensive copying
@@ -121,12 +122,12 @@ String name = Objects.requireNonNull(input, message)
 ## Guava and Apache
 
 - Google's Guava
-  - `Preconditions`
+  - `Preconditions` class
     - `checkNotNull()`
     - `checkArgument()` throws `IllegalArgumentException`
     - `checkState()` throw `IllegalStateException`
 - Apache Commons
-  - `Validate`
+  - `Validate` class
     - `notNull()`
     - `isTrue()`
     - `validState()`
@@ -155,10 +156,10 @@ String name = Objects.requireNonNull(input, message)
 - for Test frameworks
 - more readable
 - Hamcrest 
-  - `MatcherAssert`
-  - `is()`, `anyOf()`, `greaterThan()`, `startsWith()` 
+  - `MatcherAssert` class
+  - `is()`, `anyOf()`, `greaterThan()`, `startsWith()` methods 
 - AssertJ (uses fluent interfaces)
-  - `Assertions`
+  - `Assertions` class
 
 
 ```java
@@ -177,7 +178,6 @@ assertEquals("Boston", destinations.get(1).getFromDist());
 assertThat(destinations, everyItem(equalTo("Boston")));
 
 // AssertJ way
-
 Assertions.assertThat(flights)
           .isNotEmpty()
           .hasSize(2)
@@ -217,9 +217,9 @@ Assertions.assertThat(flights)
 - do not return magic numbers for success or failure (0 or -1), it forces to learn their meaning
 - for do-this-but-may-fail methods, we have some valid return types 
   - Boolean (true/false)
-  - void/throw exception (success/fail)
+  - void/throw exception (ensure nothing means success)
 - don't mix (like method returing - true/false/throw exception)
-- avoid returning null, this result in sending null within the application and may break somewhere
+- avoid returning null, this result in passing null within the application and may break somewhere
 
 ## Alternatives to null
 
@@ -253,7 +253,7 @@ Collections.emptyMap()
     - change state of something (side effect)
       - e.g. updating variable, writing to file
   - every method should either be a command that performs an action, or a query that returns data to the caller, but not both
-  - exceptions
+  - some exceptions to this principle 
     - Logging
     - intentional design
       - `String e = stack.pop();`
@@ -261,7 +261,7 @@ Collections.emptyMap()
 - Exception Handling
   - use try-with-resources
   - pass useful informations to exceptions (arguments & parent exceptions)
-  - don't catch Throwable and Exceptions (it will catch exceptions that are not meant to catch)
-  - don't catch `NullPointerException`
-  - catch and swallow
+  - don't catch Throwable and Exceptions (it will catch exceptions that are not meant to be catched)
+  - don't catch `NullPointerException`, instead fix the code
+  - don't catch and swallow exceptions
 - Use Static Analysis Tools
