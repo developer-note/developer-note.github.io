@@ -2,7 +2,7 @@
 layout: default
 title: Working with Nulls
 parent: Best Practices
-nav_order: 10
+nav_order: 1
 has_children: false
 ---
 
