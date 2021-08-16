@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Design Patterns
-parent: Java
+parent: Best Practices
+grand_parent: Java
 nav_order: 20
 has_children: false
 ---

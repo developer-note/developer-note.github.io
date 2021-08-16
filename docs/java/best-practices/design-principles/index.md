@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Design Prinicples
-parent: Java
+parent: Best Practices
+grand_parent: Java
 nav_order: 10
 has_children: false
 ---
@@ -36,6 +37,10 @@ has_children: false
 - always pay techinical debt
     - `Cost of Change` increases over the years
     - `Customer Responsiveness` decreases over the years
+
+# Clean Code Principles
+
+# [Refactoring Techniques](/docs/java/best-practices/refactoring) 
 
 # SOLID
 

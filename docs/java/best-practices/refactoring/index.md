@@ -294,3 +294,6 @@ has_children: false
 - manage the scope of refactoring, don't start a refactoring crusade
 - use code reviews
 - use IDE and Static Analysis tools
+
+# Refactoring Patterns
+
