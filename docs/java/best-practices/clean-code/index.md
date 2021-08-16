@@ -3,7 +3,7 @@ layout: default
 title: Clean Coding Principles
 parent: Best Practices
 grand_parent: Java
-nav_order: 10
+nav_order: 1
 has_children: false
 ---
 

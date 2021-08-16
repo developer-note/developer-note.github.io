@@ -3,7 +3,7 @@ layout: default
 title: Design Patterns
 parent: Best Practices
 grand_parent: Java
-nav_order: 20
+nav_order: 30
 has_children: false
 ---
 

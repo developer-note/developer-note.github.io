@@ -3,7 +3,7 @@ layout: default
 title: Refactoring Code
 parent: Best Practices
 grand_parent: Java
-nav_order: 6
+nav_order: 80
 has_children: false
 ---
 
