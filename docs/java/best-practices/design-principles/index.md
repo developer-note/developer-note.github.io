@@ -217,3 +217,6 @@ for (Task t : tasks){
 - Write Everything Twice 
 - Command query separation
 - You Ain't Gonna Need It
+- The Boy Scouts rule: Leave the campground cleaner than you found it.
+- Composition over inheritance
+- Keep It Simple, Stupid
