@@ -297,3 +297,83 @@ has_children: false
 
 # Refactoring Patterns
 
+- Most commonly used pattern
+  - Factory
+  - Strategy
+  - Adapter
+  - Facade
+- also widely used
+  - Singleton
+  - Builder
+  - State
+  - Decorator
+
+## Important Points
+
+### Object Creation (Creational)
+
+- Fixing No argument Constructor with Dependency injection
+  - Flexible +
+  - Testable +
+  - Complex Client Code x
+- Encapsulating with Static Factory methods (Encapsulation)
+  - simple client code +
+  - Easy to change +
+- move creation to a dedicated factory class (SRP )
+  - one responsibility
+- refactor to Factory Method pattern (OCP)
+  - can add new concreate products and factories 
+
+```
+Static Factory Method -> Simple Factory -> Factory Method Pattern
+
+```
+
+### Conditional Complexity (Structural)
+
+- Fix low level branching
+  - use Guard clauses
+  - Extract Conditional
+  - use Streams 
+- Replace conditional using Polymorphism before introducing Behavioural patterns
+  - create a class for each branch with a common method and then create a parent class with that common method, use a facatory to get the correct class
+- Refactor to Strategy (Factory method + Context with setter method)
+  - no branching + 
+  - improved encapsulation + 
+  - swap behaviour at runtime +
+  - OCP is respected + 
+  - complicated design -
+  - class combinatorial explosion -
+- Replace Strategy with Decorator (when mix and match behaviours)
+  - combinatorial explosion +
+  - clunky code -
+- Replace Strategy with Functional interface (leverage using lambdas)
+  - clunky code +
+  - some cases only (having less code, short simple classes) -
+  
+```
+Reduce Nestedness -> Replace with Polymorphism -> Strategy Pattern
+                                                      |
+                                                      -> Functional Approach
+
+```
+
+```
+// All uses polymorphism just the intention differs
+
+    Factory                       <>          Strategy              <>        State 
+(encapsulate object creation)           (encapsulate behaviour)           (encapsulate state)
+```
+
+### Improving Interfaces with Wrappers
+
+- Adapter pattern : wraps an existing class and acts as a connector between two incompatible interfaces
+- Decorator pattern : adds additional responsiblities to an object 
+  - can be replaced by Functional Composition e.g. `encryt.andThen(compress).apply(new File('f.txt'))`
+- Facade pattern : simplify and combines one or more modules 
+
+```
+    Adapter                       <>          Decorator                   <>        Facade 
+(wraps and changes an interface)        (wraps and adds functionality)           (wraps, unites and simplifies modules)
+
+```

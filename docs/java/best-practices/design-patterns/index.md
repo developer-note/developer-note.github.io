@@ -20,6 +20,14 @@ has_children: false
 
 ---
 
+# References
+
+- `Refactoring` by Martin F
+- `Refactoring to Patterns` by Joshua K
+- `Head First Design Patterns` 
+- `Effective Java` by Joshua K
+- `Design Patterns: Elements of Reusable Object-Oreinted Software`
+
 # Design Patterns
 
 - sets of standardized practices used in the software development industry
